@@ -1,3 +1,8 @@
+# shell configuration for all devcontainers to share
+
+this_dir=$(dirname $0)
+cp $this_dir/.inputrc ~/.inputrc
+
 hist='
 # options for shared history between devcontainers
 export HISTCONTROL=ignoreboth:erasedups
@@ -7,7 +12,6 @@ export SAVEHIST=10000000
 
 bash_hist=$hist'
 export HISTFILE=/workspaces/.bash_eternal_history
-
 '
 zsh_hist=$hist'
 export HISTFILE=/workspaces/.zsh_eternal_history
@@ -15,4 +19,3 @@ export HISTFILE=/workspaces/.zsh_eternal_history
 
 echo "$bash_hist" >> ~/.bashrc
 echo "$zsh_hist" >> ~/.zshrc
-
