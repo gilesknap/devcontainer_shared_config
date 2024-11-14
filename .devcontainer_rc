@@ -1,0 +1,18 @@
+hist='
+# options for shared history between devcontainers
+export HISTCONTROL=ignoreboth:erasedups
+export HISTFILESIZE=10000000
+export SAVEHIST=10000000
+'
+
+bash_hist=$hist'
+export HISTFILE=/workspaces/.bash_eternal_history
+
+'
+zsh_hist=$hist'
+export HISTFILE=/workspaces/.zsh_eternal_history
+'
+
+echo "$bash_hist" >> ~/.bashrc
+echo "$zsh_hist" >> ~/.zshrc
+
